@@ -1,0 +1,260 @@
+/* Common styles */
+body {
+  background-color: #141414;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  background: linear-gradient(to bottom, #555, #333);
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff0000; /* Underline color */
+  transform: scaleX(0); /* Initial scale to hide the underline */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+nav ul li.selected .indicator {
+  transform: translateY(2px) rotate(180deg); /* Rotate the indicator and move it downward */
+}
+
+nav ul li a:hover {
+  color: #ff0000; /* Change color on hover */
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1); /* Scale to reveal the underline on hover */
+}
+
+.indicator {
+  margin-left: 5px;
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+
+main {
+  padding: 20px;
+}
+
+main section {
+  margin-bottom: 20px;
+}
+
+main section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff0000;
+}
+
+main section div {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+main section div img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} 
+
+main section div h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #ff0000;
+}
+
+main section div p {
+  margin: 10px 0;
+  color: #ccc;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}
+
+footer {
+  background: linear-gradient(to bottom, #555, #333);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 0;
+}
+
+
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 5px;
+}
+
+.logo img {
+  width: 100px; /* Adjust the width of the logo as needed */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Powered by section */
+.powered-by {
+  background: linear-gradient(to bottom, #555, #333); /* Gradient background for the powered by section */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.powered-by h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo-item {
+  margin: 10px;
+  cursor: pointer; /* Change cursor to pointer when hovering over logos */
+}
+
+.logo-item img {
+  width: 100px; /* Adjust the width of the logos as needed */
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s; /* Add a smooth transition for the logo zoom effect */
+}
+
+.logo-item:hover img {
+  transform: scale(1.1); /* Increase the size of the logo when hovering */
+}
+
+/* Information panel for logos */
+.logo-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999; /* Ensure the information panel is on top of other elements */
+  display: none; /* Initially hide the information panel */
+}
+
+.logo-info img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.logo-info h3 {
+  margin-bottom: 10px;
+}
+
+.logo-info p {
+  margin-bottom: 15px;
+}
+
+#featured-bands {
+  display: flex;
+  flex-direction: column;
+}
+
+.band {
+  display: flex;
+  align-items: top;
+  margin-bottom: 20px;
+}
+
+.band-info {
+  flex: 1;
+  margin-right: 20px;
+  background-color: #444; /* Set a different shade of grey */
+  padding: 10px; /* Add padding for spacing */
+  border-radius: 5px; /* Add border radius for a rounded look */
+}
+
+.band-info h3 {
+  margin-bottom: 5px; /* Add some spacing below the band name */
+ /* Set text color to white */
+}
+
+.band-info p {
+  color: #ccc; /* Set text color to a lighter shade of grey */
+}
+
+.band-image {
+  max-width: 50%; /* Adjust as needed */
+}
+
+.band-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+/* Import Russo One font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/* Apply Russo One font to headings and other prominent text */
+h1, h2, h3 {
+    font-family: 'Russo One', sans-serif;
+    /* Add fallback font-family for compatibility */
+}
+
